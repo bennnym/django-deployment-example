@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-light bg-light">
+    <div class="navbar-nav">
+      <a class="navbar-brand" href="{% url 'home' %}">DJANGO</a>
+      <a class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
+      <a class="nav-item nav-link" href="{% url 'myapp:other' %}">Other</a>
+    </div>
+  </nav>
+  <div class="container">
+    {% block body_block %}
+    <!--Anything outisde of this will be inherited if you extend!!-->
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>
